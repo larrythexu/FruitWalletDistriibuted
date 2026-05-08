@@ -13,7 +13,7 @@ class KafkaProducer (
 ) {
 
     fun sendMessage(message: TradeEvent) {
-        log.info("Sending message: {}", message)
+        log.info("Sending message: {}", message.toString())
         kafkaTemplate.send("trades", message)
     }
 }
